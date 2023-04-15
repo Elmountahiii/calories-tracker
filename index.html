@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>My Calories tracker</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="container">
+        <h1>Tracalorie</h1>
+
+        <div class="action-buttons-section">
+          <button class="action-button daily-limit-button">
+            <span>Set Daily Limit</span>
+          </button>
+          <button class="action-button reset-day-button">
+            <span>Reset Day</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Model -->
+
+    <div class="model hide">
+      <div class="model-title">
+        <h2>Set daily limit</h2>
+        <ion-icon class="model-close-button" name="close-outline"></ion-icon>
+      </div>
+
+      <div class="model-line"></div>
+
+      <div class="model-main">
+        <p>Daily Calorie Limit</p>
+        <input id="model-input" type="text" placeholder="2000" />
+        <button class="model-button">Save</button>
+      </div>
+    </div>
+
+    <!-- main section -->
+
+    <main class="main-section">
+      <div class="container">
+        <div class="day-caloires">
+          <div class="daily-limit-calories main-Container-Div">
+            <h1 class="user-daily-limit">2000</h1>
+            <h2>Daily Calorie Limit</h2>
+          </div>
+          <div class="gain-lost-calories main-Container-Div">
+            <h1 class="user-gain-lost">0</h1>
+            <h2>Gain/Loss</h2>
+          </div>
+        </div>
+
+        <div class="counted-calories">
+          <div class="consumed-calories countDiv">
+            <h1 class="user-consumed-calories">0</h1>
+            <h2>Calories Consumed</h2>
+          </div>
+          <div class="burned-calories countDiv">
+            <h1 class="user-burned-calories">0</h1>
+            <h2>Calories Burned</h2>
+          </div>
+          <div class="remaining-calories countDiv">
+            <h1 class="user-remaining-calories">2000</h1>
+            <h2>Calories Remaining</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- interaction section -->
+
+    <section class="interaction-section">
+      <div class="container">
+        <div class="meal-interaction interactionContainer">
+          <div class="filter-contaner">
+            <input
+              type="text"
+              class="meal-filter-input interaction-input"
+              placeholder="Filter Meals ...."
+            />
+          </div>
+          <div class="inserting-contaner">
+            <div class="meal-inserting-title inserting-title">
+              <h1>Meals / Food Items</h1>
+              <button class="add-meal-button interactionButton">
+                <ion-icon name="add-outline"></ion-icon>
+                Add Meal
+              </button>
+            </div>
+            <div class="slide-div meal-input-section">
+              <input
+                type="text"
+                class="meal-title interaction-input"
+                placeholder="Enter meal or item"
+              />
+              <input
+                type="text"
+                class="meal-calories interaction-input"
+                placeholder="Enter Meal Calories"
+              />
+              <button class="save-meal interactionButton">Add Meal item</button>
+            </div>
+          </div>
+          <div class="meal-list-container list-container"></div>
+        </div>
+        <div class="workout-interaction interactionContainer">
+          <div class="filter-contaner">
+            <input
+              type="text"
+              class="workouts-filter-input interaction-input"
+              placeholder="Filter workouts ...."
+            />
+          </div>
+          <div class="inserting-contaner">
+            <div class="workout-inserting-title inserting-title">
+              <h1>Workouts</h1>
+              <button class="add-workout-button interactionButton">
+                <ion-icon name="add-outline"></ion-icon>
+                Add workout
+              </button>
+            </div>
+            <div class="slide-div workout-input-section">
+              <input
+                type="text"
+                class="workout-title interaction-input"
+                placeholder="Enter Workout Name"
+              />
+              <input
+                type="text"
+                class="workout-calories interaction-input"
+                placeholder="Enter workout Calories"
+              />
+              <button class="save-workout interactionButton">
+                Add workout item
+              </button>
+            </div>
+          </div>
+          <div class="workout-list-container list-container"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

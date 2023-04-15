@@ -1,0 +1,340 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    /* Colors */
+    --clr--green: #599F3D;
+    --clr--black: #212529;
+    --clr--gray: #F8F9FA;
+    --clr--orange: #FD7E14;
+    --clr--red: #DC3545;
+    --clr--white: #fff;
+
+
+
+    /* sizing */
+
+    --marg--containerPadding: 1.3rem;
+
+}
+
+.container {
+    margin-inline: var(--marg--containerPadding);
+}
+
+/* Header section */
+.app-header {
+    color: var(--clr--white);
+    background: var(--clr--green);
+    padding: 1rem;
+
+}
+
+.app-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.action-buttons-section {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    padding: .57rem;
+    font: inherit;
+    background: inherit;
+    color: var(--clr--white);
+    outline: none;
+    border: var(--clr--white) 1px solid;
+    border-radius: 0.50rem;
+    cursor: pointer;
+
+
+}
+
+.action-button:hover {
+    background: var(--clr--white);
+    color: var(--clr--black);
+}
+
+
+
+/* model */
+
+.model {
+    position: fixed;
+    z-index: 1;
+    left: 35%;
+    top: 2%;
+    width: 500px;
+    border: var(--clr--gray) 1px solid;
+    border-radius: 1rem;
+    background: var(--clr--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .5);
+
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+.model-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.model-close-button {
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.model-close-button:hover {
+    color: #DC3545;
+}
+
+.model-line {
+    height: 5px;
+    background-color: var(--clr--gray);
+}
+
+.model-main {
+    display: flex;
+    flex-direction: column;
+    gap: .50rem;
+
+}
+
+#model-input {
+    padding: .75rem;
+    border-radius: 1rem;
+    border: #ced4ce 2px solid;
+    outline: none;
+}
+
+#model-input:focus {
+
+    border: #599F3D 2px solid;
+
+}
+
+.model-button {
+    width: fit-content;
+    background: var(--clr--green);
+    border: none;
+    outline: none;
+    padding: .65rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font: inherit;
+    color: var(--clr--white);
+    font-weight: bold;
+
+}
+
+
+/* main */
+.main-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-caloires {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1.5rem;
+}
+
+.main-Container-Div {
+    flex: 1;
+    color: var(--clr--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+
+}
+
+.daily-limit-calories {
+
+    background: var(--clr--black);
+}
+
+.gain-lost-calories {
+    background: var(--clr--green);
+
+}
+
+
+/* counted-calories */
+.counted-calories {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.countDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    border: #ced4ce solid 1px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    background: var(--clr--gray);
+}
+
+/* interaction section */
+
+.interaction-section .container {
+    display: flex;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+.interactionContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.interaction-input {
+    width: 100%;
+    padding: .7rem;
+    border: #ced4ce solid 1px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.interaction-input::placeholder {
+    font-size: medium;
+}
+
+.interaction-input:focus {
+    border: #599F3D 2px solid;
+}
+
+.inserting-contaner {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.inserting-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .80rem;
+}
+
+.meal-inserting-title {
+    border-left: #599F3D solid 5px;
+}
+
+.workout-inserting-title {
+    border-left: var(--clr--orange) solid 5px;
+}
+
+
+.interactionButton {
+    padding: .60rem;
+    width: 150px;
+    outline: none;
+    color: #F8F9FA;
+    border: none;
+    font: inherit;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.add-meal-button,
+.save-meal {
+    background: var(--clr--green);
+}
+
+.add-workout-button,
+.save-workout {
+    background-color: var(--clr--orange);
+}
+
+.slide-div {
+
+
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: var(--clr--gray);
+    padding: 1rem;
+    border: #ced4ce solid 1px;
+    border-radius: 12px;
+
+
+}
+
+
+/* list  */
+
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: #ced4ce solid 1.5px;
+    padding: .75rem;
+    border-radius: 10px;
+}
+
+.Calories-count {
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.item-delete-button {
+    font-size: 45px;
+    color: #DC3545;
+}
+
+.item-meal-calories-count {
+
+    background-color: #599F3D;
+
+}
+
+.item-workout-calories-count {
+    background-color: #FD7E14;
+
+}
